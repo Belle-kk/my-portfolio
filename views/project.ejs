@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title><%= project.title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container pb-0">
+        <a href="/" class="back-link">&larr; 返回首頁</a>
+        <h1 class="mt-16 mb-24"><%= project.title %></h1>
+        <img src="<%= project.heroImg %>" class="responsive-media rounded glass-card">
+    </div>
+
+    <!-- 第一層：商品視覺企劃 -->
+    <section class="container pb-0">
+        <h2 class="section-title">01. 商品視覺企劃</h2>
+        <div class="layer1-grid glass-card p-24 rounded">
+            <!-- ✨ 新增的拼貼畫廊 -->
+            <div class="product-gallery">
+                <!-- 第一張圖當主圖 (大) -->
+                <img src="<%= project.layer1.gallery[0] %>" class="gallery-main hover-effect">
+                <div class="gallery-sub">
+                    <!-- 第二、三張圖當副圖 (並排小圖) -->
+                    <img src="<%= project.layer1.gallery[1] %>" class="hover-effect">
+                    <img src="<%= project.layer1.gallery[2] %>" class="hover-effect">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <p class="text-md mb-24"><%= project.layer1.intro %></p>
+                <div class="reasons-list">
+                    <% project.layer1.reasons.forEach(function(reason, index) { %>
+                        <div class="reason-card">
+                            <span class="reason-num">0<%= index + 1 %></span>
+                            <div>
+                                <h4><%= reason.title %></h4>
+                                <p class="text-sm"><%= reason.desc %></p>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二層：檔期宣傳與活動素材 -->
+    <section class="container pb-0">
+        <h2 class="section-title">02. 檔期宣傳與活動素材</h2>
+        <div class="layer2-grid glass-card p-24 rounded">
+            <div class="kv-container mb-16">
+                <img src="<%= project.layer2.kv %>" class="responsive-media rounded">
+            </div>
+            <div class="sub-visuals" style="display: flex; gap: 16px;">
+                <div style="flex: 1;"><img src="<%= project.layer2.banner %>" class="responsive-media rounded"></div>
+                <div style="flex: 1;"><img src="<%= project.layer2.edm %>" class="responsive-media rounded"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三層：社群行銷與自動化技術 -->
+    <section class="container showcase">
+        <h2 class="section-title">03. 社群行銷與自動化技術</h2>
+        <div class="layer3-grid">
+            <div class="social-box glass-card p-24">
+                <h4 class="mb-16">社群貼文</h4>
+                <img src="<%= project.layer3.igPost %>" class="responsive-media rounded">
+            </div>
+            <div class="video-box glass-card p-24">
+                <h4 class="mb-16">廣告短影音</h4>
+                <video controls class="responsive-media rounded" style="max-height: 400px; width:100%; object-fit: contain;">
+                    <source src="/videos/<%= project.layer3.video %>" type="video/mp4">
+                </video>
+            </div>
+            <div class="tech-box glass-card p-24" style="background: var(--text-primary); color: white;">
+                <h4 class="mb-16" style="color: var(--accent-color);">⚙️ <%= project.layer3.techNotes.title %></h4>
+                <p class="tech-notes-content" style="line-height: 1.8; opacity: 0.9;"><%= project.layer3.techNotes.content %></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# 依賴套件
+node_modules/
+
+# 本地環境變數（內含資料庫密碼、Session 密鑰等）
+.env
+
+# 本地上傳的測試音訊與暫存檔（避免把測試垃圾推上去）
+public/uploads/
+uploads/
+!uploads/.gitkeep
+*.log
+*.mp3
+*.wav
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+
+# 擋掉資料庫安全憑證檔案
+*.pem
+ca.pem
+
+# 忽略 Google 金鑰與環境變數
+config/tmusic-service-account.json
+
+# 擋住 txt 備註事項
+*.txt

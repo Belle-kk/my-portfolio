@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title><%= profile.metaTitle %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- 區塊一：封面 -->
+    <section class="hero container">
+        <div class="hero-content">
+            <span class="badge"><%= profile.hero.badge %></span>
+            <h1><%= profile.hero.title %></h1>
+            <p><%= profile.hero.description %></p>
+            <p class="mt-16">Contact: <%= profile.hero.email %></p>
+        </div>
+    </section>
+
+    <!-- 區塊二：行銷自動化工作流 -->
+    <section class="ezbiz container">
+        <div class="section-header"><h2><%= profile.ezbiz.title %></h2></div>
+        <div class="glass-card hover-effect p-24" style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 class="mb-16"><%= profile.ezbiz.subtitle %></h3>
+                <p class="mb-24" style="line-height: 1.8; opacity: 0.9;"><%= profile.ezbiz.description %></p>
+                <div class="tech-stack mb-24">
+                    <% profile.ezbiz.techStack.forEach(function(tech) { %>
+                        <span><%= tech %></span>
+                    <% }); %>
+                </div>
+                <!-- 如果沒有影片，這顆按鈕可以拿掉，或是改成連結到您的 GitHub -->
+                <!-- <a href="<%= profile.ezbiz.demoLink %>" target="_blank" class="cta-button">觀看自動化展示</a> -->
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <!-- 記得把 Make.com 的截圖放進 images 資料夾 -->
+                <img src="/images/<%= profile.ezbiz.image %>" alt="自動化工作流" class="responsive-media rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- 區塊三：商品傳送門 (作品卡片) -->
+    <section class="container showcase">
+        <div class="section-header"><h2>精選專案成果</h2></div>
+        <div class="grid-3-cols">
+            <% profile.portfolios.forEach(function(item) { %>
+                <div class="project-card glass-card hover-effect">
+                    <img src="<%= item.coverImg %>" class="responsive-media" style="height: 220px; width: 100%; object-fit: cover; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+                    <div class="p-24">
+                        <span class="text-sm"><%= item.category %></span>
+                        <h3 class="mb-16 mt-8"><%= item.title %></h3>
+                        <!-- 動態生成路由連結 -->
+                        <a href="/project/<%= item.id %>" class="card-link">查看完整專案成果 &rarr;</a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+</body>
+</html>

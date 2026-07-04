@@ -1,0 +1,175 @@
+/* =========================================
+   1. 色彩計畫與變數 (Variables)
+========================================= */
+:root {
+    --bg-primary: #F5F5F0; 
+    --text-primary: #3A4F59; 
+    --text-secondary: #4A4A4A; 
+    --accent-color: #D4A373; 
+    --accent-hover: #C39262; 
+    
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --shadow-soft: 0 8px 32px rgba(58, 79, 89, 0.05);
+    --shadow-hover: 0 12px 40px rgba(58, 79, 89, 0.09);
+    
+    --radius-lg: 16px;
+    --radius-sm: 8px;
+}
+
+/* =========================================
+   2. 全局重置與排版 (Reset & Typography)
+========================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; line-height: 1.3; }
+
+/* 實用間距與文字類別 (Utilities) */
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.p-24 { padding: 24px; }
+.pb-0 { padding-bottom: 32px !important; }
+.rounded { border-radius: var(--radius-sm); }
+.text-md { font-size: 1.2rem; color: var(--text-primary); }
+.text-sm { font-size: 0.95rem; color: var(--text-secondary); }
+
+/* =========================================
+   3. 共用元件 (Components)
+========================================= */
+.container { max-width: 1100px; margin: 0 auto; padding: 50px 24px; }
+.showcase { padding-bottom: 80px; }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-header h2 { font-size: 2.2rem; margin-bottom: 8px; }
+
+/* 標籤與按鈕 */
+.badge {
+    display: inline-block; padding: 6px 16px; background-color: rgba(58, 79, 89, 0.08);
+    color: var(--text-primary); border-radius: 24px; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;
+}
+.cta-button {
+    display: inline-block; background-color: var(--accent-color); color: #FFFFFF;
+    text-decoration: none; padding: 14px 36px; border-radius: var(--radius-sm);
+    font-size: 1.05rem; font-weight: 500; transition: all 0.3s ease; border: none;
+}
+.cta-button:hover { background-color: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(212, 163, 115, 0.25); }
+
+/* 玻璃卡片與特效 */
+.glass-card {
+    background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);
+}
+.hover-effect { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.hover-effect:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+/* 確保圖片不變形 */
+.responsive-media {
+    max-width: 100%; height: auto; object-fit: contain;
+    border-radius: var(--radius-sm); display: block;
+}
+
+/* =========================================
+   4. 首頁佈局 (Home Layout)
+========================================= */
+.hero { text-align: center; padding-top: 60px; padding-bottom: 40px; }
+.hero-content { max-width: 760px; margin: 0 auto; }
+.hero h1 { font-size: 3.2rem; margin-bottom: 24px; }
+.tech-stack span {
+    background: rgba(255, 255, 255, 0.6); 
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary); 
+    padding: 6px 16px; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    font-weight: 500;
+    white-space: nowrap; /* 🎯 新增這行：強制標籤內的文字絕對不換行 */
+    display: inline-block; /* 🎯 新增這行：保持區塊完整性 */
+}
+.grid-3-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.project-card { padding: 0; overflow: hidden; }
+.card-link { display: inline-block; color: var(--accent-color); font-weight: 600; text-decoration: none; margin-top: 8px; transition: color 0.3s; }
+.card-link:hover { color: var(--accent-hover); }
+
+/* =========================================
+   5. 專案內頁佈局 (Project Detail Layout)
+========================================= */
+.back-link { display: inline-block; color: var(--text-secondary); text-decoration: none; font-weight: 500; }
+.back-link:hover { color: var(--text-primary); }
+.section-title { font-size: 1.4rem; margin-bottom: 24px; border-left: 4px solid var(--accent-color); padding-left: 12px; }
+
+/* 第一層：商品維度 (取消裁切，還原自然比例) */
+.layer1-grid { 
+    display: grid; 
+    grid-template-columns: 1.2fr 1fr; /* 微調為 1.2 比 1，讓文字區塊有稍微多一點呼吸空間 */
+    gap: 48px; 
+    align-items: center; 
+}
+
+.product-gallery { display: flex; flex-direction: column; gap: 16px; }
+
+/* 🎯 [關鍵修正] 移除 aspect-ratio 與 object-fit: cover。讓圖片按照真實比例呈現，絕對不會再被切掉！ */
+.gallery-main { width: 100%; height: auto; border-radius: var(--radius-sm); }
+.gallery-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.gallery-sub img { width: 100%; height: auto; border-radius: var(--radius-sm); }
+
+/* 針對右側文字與前言的優化 */
+.product-info > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+/* 特點卡片 */
+.reason-card { 
+    display: flex; 
+    align-items: center; 
+    gap: 24px; 
+    background: rgba(255, 255, 255, 0.65); 
+    padding: 24px 28px; 
+    border-radius: var(--radius-sm); 
+    margin-bottom: 16px; 
+    transition: transform 0.3s ease; 
+}
+
+.reason-card:hover { transform: translateX(8px); }
+
+/* 數字樣式 */
+.reason-num { 
+    font-size: 2.4rem; 
+    font-weight: 700; 
+    color: var(--accent-color); 
+    opacity: 0.9; 
+    line-height: 1;
+}
+
+/* 第三層：社群與技術 */
+.layer3-grid { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 24px; }
+.footer { text-align: center; padding: 40px 24px; font-size: 0.9rem; color: var(--text-primary); opacity: 0.6; }
+
+/* =========================================
+   6. RWD 響應式優化 (合併手機版設定)
+========================================= */
+@media (max-width: 900px) {
+    .container { padding: 20px 20px; }
+    .hero { padding-top: 40px; padding-bottom: 20px; } 
+    .hero h1 { font-size: 2.2rem; }
+    
+    /* 首頁與內頁的網格全改為單欄垂直排列 */
+    .grid-3-cols, .layer1-grid, .layer3-grid { grid-template-columns: 1fr; }
+    .sub-visuals { flex-direction: column; }
+    
+    /* 調整影片與主視覺在手機上的最高高度 */
+    .responsive-media { max-height: 50vh; }
+}
+/* 讓 JSON 的 \n 換行符號能在網頁上正常換行 */
+.tech-notes-content {
+    white-space: pre-line;
+}

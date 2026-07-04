@@ -1,0 +1,37 @@
+{
+    "metaTitle": "MarTech 工程師 | 作品首頁",
+    "hero": {
+        "badge": "MarTech × 自動化流程",
+        "title": "用技術解決行銷痛點",
+        "description": "我專注於將行銷邏輯轉化為自動化程式，打造流暢的 SaaS 體驗與高效的電商解決方案。",
+        "email": "bellekk0523@gmail.com"
+    },
+    "ezbiz": {
+        "title": "自研 AI 行銷與營運中樞",
+        "subtitle": "MktMatrix AI Suite - 將 AI 生成與工作流完美整合",
+        "description": "為解決行銷素材產出耗時的痛點，我開發了這套內部自動化系統。只需輸入商品條件，即可串接 Gemini 與 ChatGPT API，自動生成具備排版邏輯的圖文素材。系統更內建 Webhook 節點，能將生成的素材與顧客名單，無縫拋轉至 Make.com 等外部工作流或 CRM 系統，實現從「創意生成」到「成效追蹤」的全自動化。",
+        "techStack": ["自研行銷 UI 介面", "Gemini / ChatGPT API", "Webhook 整合", "營運數據儀表板"],
+        "demoLink": "#",
+        "image": "mktmatrix-screenshot.png"
+    },
+    "portfolios": [
+        {
+            "id": "shuguo",
+            "title": "綜合蔬果餅乾",
+            "category": "常態熱銷 ｜ 全渠道視覺企劃",
+            "coverImg": "/images/vegi.png"
+        },
+        {
+            "id": "tea",
+            "title": "療癒系花草茶",
+            "category": "生活風格 ｜ 質感社群互動",
+            "coverImg": "/images/teai.png"
+        },
+        {
+            "id": "nougat",
+            "title": "法式手作牛軋糖",
+            "category": "節慶大檔 ｜ 促銷與轉換優化",
+            "coverImg": "/images/nougati.jpg"
+        }
+    ]
+}

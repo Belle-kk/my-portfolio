@@ -1,0 +1,96 @@
+{
+    "shuguo": {
+        "title": "綜合蔬果餅乾 - 跨渠道視覺與技術整合",
+        "heroImg": "/images/top_veg1.png",
+        "layer1": {
+            "gallery": [
+                "/images/shuguo-product-main.png",
+                "/images/shuguo-product-detail1.png",
+                "/images/shuguo-product-detail2.png"
+            ],
+            "intro": "以低飽和莫蘭迪色系凸顯蔬果原色，建立天然健康的品牌印象。",
+            "reasons": [
+                { "title": "非油炸烘焙", "desc": "保留營養，負擔減半" },
+                { "title": "100% 無添加", "desc": "無人工色素，真實原味" },
+                { "title": "夾鏈袋設計", "desc": "防潮保鮮，隨時享用" }
+            ]
+        },
+        "layer2": {
+            "kv": "/images/shuguo-campaign-kv.png",
+            "banner": "/images/shuguo-campaign-banner.png",
+            "edm": "/images/shuguo-campaign-edm.png"
+        },
+        "layer3": {
+            "igPost": "/images/shuguo-social-ig.png",
+            "video": "shuguo-ads-video.mp4",
+"techNotes": {
+    "title": "自動化行銷工程筆記",
+    "content": "【AI 工作流與社群自動化導入】\n1. AI 視覺與文案賦能：本專案捨棄傳統耗時的製圖流程，透過自建的『活動企劃 GEM』與『視覺總監 GEM』，自動將商品規格轉化為 FAB 賣點，並生成高質感且具備排版邏輯的去字底圖，使素材產出效率提升 300%。\n2. DM 個人化與 FOMO 觸發：針對舊客名單，由 AI 自動撰寫帶有倒數計時與專屬折扣碼（如 Sale50）的急迫性文案，精準推升 Email 點擊轉換。\n3. 群互動自動化 (Make.com 應用)：在 IG 佈局導購短影音，當粉絲留言『想吃蔬果餅乾』時，透過 Webhook 觸發自動化腳本，即時由系統私訊發送專屬隱藏優惠，並將名單同步寫入 CRM 系統，實現全自動的社群增長漏斗。"
+}
+        }
+    },
+    
+    "tea": {
+        "title": "療癒系花草茶 - 視覺重製與社群營運",
+        "heroImg": "/images/top_tea.png",
+        "layer1": {
+            "gallery": [
+                "/images/tea-product-main.png",
+                "/images/tea-product-detail1.png",
+                "/images/tea-product-detail2.png"
+            ],
+            "intro": "週末的 Me Time，從一杯好茶開始。",
+            "reasons": [
+                { "title": "無咖啡因", "desc": "夜晚飲用也不怕失眠" },
+                { "title": "立體茶包", "desc": "茶葉完全舒展，釋放純粹茶香" },
+                { "title": "天然花香", "desc": "無添加化學香精" }
+            ]
+        },
+        "layer2": {
+            "kv": "/images/tea-campaign-kv.png",
+            "banner": "/images/tea-campaign-banner.png",
+            "edm": "/images/tea-campaign-edm.png"
+        },
+        "layer3": {
+            "igPost": "/images/tea-social-ig.png",
+            "video": "tea-video.mp4",
+            "techNotes": {
+                "title": "社群營運策略",
+                "content": "透過「療癒生活 × 花草茶」內容定位，將商品包裝成日常生活儀式，而非單純販售產品。\n• 生活情境切入，提高貼文停留時間與收藏率。\n• 限時優惠＋滿額贈品，引導快速下單，提升轉換率。\n• CTA 引導首頁連結，集中流量至購物頁。\n• 統一品牌色調與版型，提高品牌辨識度。\n• Hashtag 佈局，增加自然觸及與探索頁曝光。\n預期成效\n提升貼文互動率（Like／留言／收藏）\n增加首頁連結點擊率（CTR）\n提高活動期間商品轉換率\n建立品牌生活風格形象，提升回購意願"
+
+            }
+        }
+    },
+
+    "nougat": {
+        "title": "法式手作牛軋糖 - 節慶大檔企劃",
+        "heroImg": "/images/top_nougat.jpg",
+        "layer1": {
+            "gallery": [
+                "/images/nougat-product-main.png",
+                "/images/nougat-product-detail1.png",
+                "/images/nougat-product-detail2.png"
+            ],
+            "intro": "【過年送禮首選，傳遞最溫潤的心意。",
+            "reasons": [
+                { "title": "法國發酵奶油", "desc": "奶香濃郁，不黏牙" },
+                { "title": "低溫烘焙堅果", "desc": "口感酥脆，越嚼越香" },
+                { "title": "減糖配方", "desc": "使用海藻糖，甜度降低30%" }
+            ]
+        },
+        "layer2": {
+            "kv": "/images/nougat-campaign-kv.png",
+            "banner": "/images/nougat-campaign-banner.png",
+            "edm": "/images/nougat-campaign-edm.png"
+        },
+        "layer3": {
+            "igPost": "/images/nougat-social-fb.png",
+            "video": "nougat-video.mp4",
+            "techNotes": {
+                "title": "EDM 轉換率優化",
+                "content": "FB 新品貼文 → 自動化再行銷\n• 精準分眾發送新品 EDM\n• 加入優惠倒數，提升購買急迫感\n• 購物車未結帳自動提醒\n• 新會員、舊會員不同內容推播\n• 搭配 88 折＋滿額折扣，提高成交率\n成效\n📈 開信率 ↑20%\n🖱 點擊率 ↑18%\n🛒 回購率 ↑15%"
+
+            }
+        }
+    }
+}
