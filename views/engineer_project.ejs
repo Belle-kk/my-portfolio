@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title><%= project.title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container pb-0">
+        <a href="/engineer" class="back-link">&larr; 返回工程師首頁</a>
+        <h1 class="mt-16 mb-24"><%= project.title %></h1>
+        <img src="<%= project.heroImg %>" class="responsive-media rounded glass-card">
+    </div>
+
+    <!-- 01. 系統架構與技術棧 -->
+    <section class="container pb-0">
+        <h2 class="section-title">01. 系統架構與技術棧</h2>
+        <div class="layer1-grid glass-card p-24 rounded">
+            <div class="product-gallery">
+                <img src="<%= project.layer1.archImg %>" class="gallery-main hover-effect" style="aspect-ratio: auto; object-fit: contain; background: #fff;">
+            </div>
+            <div class="product-info">
+                <p class="text-md mb-24"><%= project.layer1.intro %></p>
+                <div class="reasons-list">
+                    <% project.layer1.techs.forEach(function(tech) { %>
+                        <div class="reason-card" style="padding: 16px;">
+                            <div style="font-size: 1.5rem; margin-right: 12px;">⚙️</div>
+                            <div>
+                                <h4 style="color: var(--text-primary);"><%= tech.title %></h4>
+                                <p class="text-sm"><%= tech.desc %></p>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. 核心功能實裝 -->
+    <section class="container pb-0">
+        <h2 class="section-title">02. 核心功能實裝</h2>
+        <div class="glass-card p-24 rounded" style="display: flex; gap: 24px;">
+            <div style="flex: 1;"><img src="<%= project.layer2.demoImg1 %>" class="responsive-media rounded"></div>
+            <div style="flex: 1;"><img src="<%= project.layer2.demoImg2 %>" class="responsive-media rounded"></div>
+        </div>
+    </section>
+
+    <!-- 03. 挑戰與解決方案 -->
+    <section class="container showcase">
+        <h2 class="section-title">03. 開發挑戰與解決方案</h2>
+        <div class="glass-card p-24 rounded" style="background: var(--text-primary); color: white;">
+            <h3 class="mb-16" style="color: var(--accent-color);">🚨 挑戰：<%= project.layer3.challenge %></h3>
+            <p style="line-height: 1.8; opacity: 0.9; margin-bottom: 24px; white-space: pre-line;"><%= project.layer3.solution %></p>
+            <a href="<%= project.layer3.githubLink %>" target="_blank" class="cta-button" style="background: #fff; color: var(--text-primary);">
+                查看 GitHub 原始碼
+            </a>
+        </div>
+    </section>
+</body>
+</html>

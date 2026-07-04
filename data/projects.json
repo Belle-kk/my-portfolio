@@ -10,7 +10,7 @@
             ],
             "intro": "以低飽和莫蘭迪色系凸顯蔬果原色，建立天然健康的品牌印象。",
             "reasons": [
-                { "title": "非油炸烘焙", "desc": "保留營養，負擔減半" },
+                { "title": "低溫油炸烘焙", "desc": "保留營養，負擔減半" },
                 { "title": "100% 無添加", "desc": "無人工色素，真實原味" },
                 { "title": "夾鏈袋設計", "desc": "防潮保鮮，隨時享用" }
             ]
@@ -71,7 +71,7 @@
                 "/images/nougat-product-detail1.png",
                 "/images/nougat-product-detail2.png"
             ],
-            "intro": "【過年送禮首選，傳遞最溫潤的心意。",
+            "intro": "過年送禮首選，傳遞最溫潤的心意。",
             "reasons": [
                 { "title": "法國發酵奶油", "desc": "奶香濃郁，不黏牙" },
                 { "title": "低溫烘焙堅果", "desc": "口感酥脆，越嚼越香" },

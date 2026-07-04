@@ -1,0 +1,24 @@
+{
+    "mktmatrix": {
+        "title": "MktMatrix AI Suite - 行銷自動化生成系統",
+        "heroImg": "/images/mktmatrix-screenshot.png",
+        "layer1": {
+            "archImg": "https://via.placeholder.com/800x600/E8E8E1/3A4F59?text=System+Architecture",
+            "intro": "本系統採 Node.js 後端架構，透過介面接收參數後，非同步呼叫 LLM 進行圖文運算，並透過 Webhook 實現資料拋轉。",
+            "techs": [
+                { "title": "前端介面", "desc": "HTML5 / CSS3 / RWD 響應式 / 狀態管理" },
+                { "title": "後端邏輯", "desc": "Node.js / Express.js 路由與資料流傳遞" },
+                { "title": "第三方 API", "desc": "Gemini API / ChatGPT API / Make.com Webhook" }
+            ]
+        },
+        "layer2": {
+            "demoImg1": "https://via.placeholder.com/800x450/D4A373/FFFFFF?text=Core+Feature+1",
+            "demoImg2": "https://via.placeholder.com/800x450/3A4F59/FFFFFF?text=Core+Feature+2"
+        },
+        "layer3": {
+            "challenge": "處理 AI API 的長時間等待與逾時 (Timeout) 錯誤",
+            "solution": "由於生成高品質圖文需要數十秒的運算，容易造成前端請求逾時。我導入了非同步的 Promise 處理機制與前端 Loading 狀態反饋，確保資料流能穩定接收，提升了系統的容錯率與使用者體驗。",
+            "githubLink": "https://github.com/您的帳號/mktmatrix"
+        }
+    }
+}

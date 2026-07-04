@@ -1,19 +1,24 @@
 {
-    "metaTitle": "MarTech 工程師 | 作品首頁",
-    "hero": {
-        "badge": "MarTech × 自動化流程",
-        "title": "用技術解決行銷痛點",
-        "description": "我專注於將行銷邏輯轉化為自動化程式，打造流暢的 SaaS 體驗與高效的電商解決方案。",
-        "email": "bellekk0523@gmail.com"
-    },
-    "ezbiz": {
-        "title": "自研 AI 行銷與營運中樞",
-        "subtitle": "MktMatrix AI Suite - 將 AI 生成與工作流完美整合",
-        "description": "為解決行銷素材產出耗時的痛點，我開發了這套內部自動化系統。只需輸入商品條件，即可串接 Gemini 與 ChatGPT API，自動生成具備排版邏輯的圖文素材。系統更內建 Webhook 節點，能將生成的素材與顧客名單，無縫拋轉至 Make.com 等外部工作流或 CRM 系統，實現從「創意生成」到「成效追蹤」的全自動化。",
-        "techStack": ["自研行銷 UI 介面", "Gemini / ChatGPT API", "Webhook 整合", "營運數據儀表板"],
-        "demoLink": "#",
-        "image": "mktmatrix-screenshot.png"
-    },
+  "metaTitle": "網站行銷 × 電商營運作品集 | Belle Kuo",
+  "hero": {
+    "badge": "網站行銷｜電商營運｜AI 工具應用",
+    "title": "網站行銷與數位營運作品集",
+    "description": "擁有 10 年以上電商平台營運與網站行銷經驗，熟悉網站管理、商品企劃、視覺設計及 AI 工具應用，持續透過技術提升內容品質與工作效率。",
+    "email": "bellekk0523@gmail.com"
+  },
+  "ezbiz": {
+    "title": "AI 行銷工具實作",
+    "subtitle": "MktMatrix AI Suite｜整合 AI 生成與行銷工作流程",
+    "description": "為提升電商內容產製效率，我設計並開發此 AI 行銷工具。透過整合 Gemini 與 ChatGPT API，可快速生成商品文案、行銷圖片與 SEO 內容，並結合 Webhook 串接外部工作流程，協助降低重複作業時間，提升網站與社群內容產出效率。",
+    "techStack": [
+      "AI 文案生成",
+      "Gemini / ChatGPT API",
+      "Webhook 工作流程整合",
+      "行銷數據 Dashboard"
+    ],
+    "demoLink": "#",
+    "image": "mktmatrix-screenshot.png"
+  },
     "portfolios": [
         {
             "id": "shuguo",

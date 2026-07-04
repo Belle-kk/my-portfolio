@@ -1,0 +1,31 @@
+{
+    "metaTitle": "全端/AI 工程師 | 技術作品集",
+    "hero": {
+        "badge": "Full-Stack × AI Automation",
+        "title": "打造高擴充性的系統架構",
+        "description": "熟悉 Node.js 後端開發、API 串接與前後端分離架構。擅長將 AI 模型與 Webhook 整合，開發自動化 SaaS 系統以解決真實商業痛點。",
+        "email": "bellekk0523@gmail.com"
+    },
+    "ezbiz": {
+        "title": "核心技術亮點",
+        "subtitle": "前後端與 AI API 串接實戰",
+        "description": "具備從 0 到 1 獨立開發 Web 應用的能力。前端著重於高質感的 UI/UX 與非同步資料處理；後端熟練掌握 Node.js 路由、資料流傳遞，並能靈活部署至 Render 等雲端容器環境。",
+        "techStack": ["Node.js / Express", "RESTful API", "Prompt Engineering", "CI/CD 雲端部署"],
+        "demoLink": "https://github.com/您的GitHub帳號",
+        "image": "mktmatrix-screenshot.png"
+    },
+    "portfolios": [
+        {
+            "id": "mktmatrix",
+            "title": "MktMatrix AI Suite",
+            "category": "SaaS 系統開發 ｜ API 整合",
+            "coverImg": "/images/mktmatrix-screenshot.png"
+        },
+        {
+            "id": "audio",
+            "title": "智慧雲端音訊平台",
+            "category": "全端開發 ｜ 影音串流應用",
+            "coverImg": "https://via.placeholder.com/800x450/3A4F59/FFFFFF?text=Audio+Platform"
+        }
+    ]
+}
