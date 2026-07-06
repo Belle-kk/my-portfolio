@@ -3,22 +3,47 @@
         "title": "MktMatrix AI Suite - 行銷自動化生成系統",
         "heroImg": "/images/mktmatrix-screenshot.png",
         "layer1": {
-            "archImg": "https://via.placeholder.com/800x600/E8E8E1/3A4F59?text=System+Architecture",
-            "intro": "本系統採 Node.js 後端架構，透過介面接收參數後，非同步呼叫 LLM 進行圖文運算，並透過 Webhook 實現資料拋轉。",
+            "archImg": "/images/archImg.png",
+            "intro": "這套系統採 Node.js 後端架構，透過前端介面接收使用者輸入的商品條件後，非同步呼叫 LLM 進行圖文運算，並透過 Webhook 將資料自動拋轉至外部排程系統。",
             "techs": [
-                { "title": "前端介面", "desc": "HTML5 / CSS3 / RWD 響應式 / 狀態管理" },
-                { "title": "後端邏輯", "desc": "Node.js / Express.js 路由與資料流傳遞" },
-                { "title": "第三方 API", "desc": "Gemini API / ChatGPT API / Make.com Webhook" }
+                { "title": "前端介面開發", "desc": "以 HTML5/CSS3 構建具備現代 SaaS 風格的 RWD 響應式介面，優化使用者操作體驗。" },
+                { "title": "後端與資料流", "desc": "使用 Node.js / Express.js 處理路由，負責前端請求與第三方服務之間的資料傳遞。" },
+                { "title": "第三方 API 整合", "desc": "介接 Gemini / ChatGPT API 進行自動化生成，並與 Make.com Webhook 無縫對接。" }
             ]
         },
         "layer2": {
-            "demoImg1": "https://via.placeholder.com/800x450/D4A373/FFFFFF?text=Core+Feature+1",
-            "demoImg2": "https://via.placeholder.com/800x450/3A4F59/FFFFFF?text=Core+Feature+2"
+            "demoImg1": "/images/demoImg1.png",
+            "demoImg2": "/images/demoImg2.png"
         },
         "layer3": {
-            "challenge": "處理 AI API 的長時間等待與逾時 (Timeout) 錯誤",
-            "solution": "由於生成高品質圖文需要數十秒的運算，容易造成前端請求逾時。我導入了非同步的 Promise 處理機制與前端 Loading 狀態反饋，確保資料流能穩定接收，提升了系統的容錯率與使用者體驗。",
-            "githubLink": "https://github.com/您的帳號/mktmatrix"
+            "challenge": "處理 AI API 的長時間等待與前端體驗優化",
+            "solution": "【問題】 由於呼叫 LLM 模型進行多通路行銷文案生成通常需要較長的運算時間（約 5~10 秒），且後端需同時驅動 「Prompt 關鍵字生成引擎」 來提供高準確度的生圖策略，若處理不當容易造成瀏覽器請求逾時 (Timeout) 或使用者誤以為系統當機。\n\n【解決方案】 \n 1. 非同步架構優化： 我在後端導入了非同步（Asynchronous）處理機制。在等待 AI API 回傳時，前端實作明確的 Loading 狀態與進度提示，確保資料流穩定接收不漏失。\n\n2. 解耦設計與成本優化（架構亮點）： 系統核心採用「文案自動化與生圖策略分離」的解耦設計。後端經由精密 Prompt 導引 AI 精準輸出符合 Midjourney / DALL-E 3 規格的結構化生圖提示詞。此設計不僅將單次 API 呼叫成本與時間大幅降低，更將生圖的自主權交還給操作者，大幅提升系統的容錯率與商業實用性。",
+
+            "githubLink": "#"
+            
+        }
+    },
+    
+    "audio": {
+        "title": "EchoFlux 真實技術棧",
+        "heroImg": "/images/echoflux-screenshot.png",
+        "layer1": {
+            "archImg": "/images/echoflux-arch.png",
+            "intro": "此專案著重於多媒體檔案的處理與雲端部署。系統能接收音訊輸入，透過後端邏輯進行轉檔或狀態處理，並在前端提供流暢的播放與管理介面。",
+            "techs": [
+                { "title": "前端 AI 智慧控制介面", "desc": "實作多檔案上傳清單管理，整合智慧型音訊強化的引數配置，並動態捕捉後端 FFmpeg 合併完成後的雲端回傳路徑。" },
+                { "title": "雲端部署與整合", "desc": "成功將全端系統託管於 Render 平台。除解決跨網域（CORS）與環境變數配置外，更深入串接第三方 Google Drive API，完成跨平台的雲端檔案動態寫入與權限自動解鎖。" }
+            ]
+        },
+        "layer2": {
+            "demoImg1": "/images/echoflux-ui.png",
+            "demoImg2": "/images/echoflux-code.png"
+        },
+        "layer3": {
+            "challenge": "EchoFlux 核心技術突破",
+            "solution": "【問題】 專案在後端經由 FFmpeg 混音並高壓輸出大型 MP3 檔案後，直接透過一般的數據封包上傳至 Google Drive API 時，極易因網路波動或檔案鎖定導致傳輸中斷，造成雲端硬碟產生 0KB 毀損檔案或發生檔名變數重複污染（出現亂碼時間戳）的嚴重臭蟲。\n\n【解決方案】 實作「終極物理串流突圍」機制。 徹底捨棄不穩定的記憶體緩衝（Buffer）傳輸，改用 Node.js 的 fs.createReadStream 建立真實的硬碟實體檔案二進位制串流管道（Binary Pipe）直灌雲端。同時重新設計 driveService 核心邏輯，嚴格落實參數命名對齊與解耦，將檔名與實體路徑完全切割。最終達成 100% 傳輸成功率，確保雲端檔名乾淨正確，且檔案皆能流暢預覽與播放。",
+
+            "githubLink": "https://echoflux.onrender.com/index.html"
         }
     }
 }
