@@ -8,9 +8,11 @@
 </head>
 <body>
     <div class="container pb-0">
-        <a href="/engineer" class="back-link">&larr; 返回工程師首頁</a>
+        <a href="/engineer" class="back-link">&larr; 返回技術作品集</a>
         <h1 class="mt-16 mb-24"><%= project.title %></h1>
-        <img src="<%= project.heroImg %>" class="responsive-media rounded glass-card">
+        <img src="<%= project.heroImg %>"
+            alt="<%= project.title %> 專案畫面"
+            class="responsive-media rounded glass-card engineer-hero-img">
     </div>
 
     <!-- 01. 系統架構與技術棧 -->
@@ -40,9 +42,31 @@
     <!-- 02. 核心功能實裝 -->
     <section class="container pb-0">
         <h2 class="section-title">02. 核心功能實裝</h2>
-        <div class="glass-card p-24 rounded" style="display: flex; gap: 24px;">
-            <div style="flex: 1;"><img src="<%= project.layer2.demoImg1 %>" class="responsive-media rounded"></div>
-            <div style="flex: 1;"><img src="<%= project.layer2.demoImg2 %>" class="responsive-media rounded"></div>
+
+        <div class="glass-card p-24 rounded engineer-demo-grid">
+            <div class="engineer-demo-item">
+                <a href="<%= project.layer2.demoImg1 %>"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="點擊查看完整圖片">
+                    <img
+                        src="<%= project.layer2.demoImg1 %>"
+                        alt="<%= project.title %> 功能畫面一"
+                        class="responsive-media rounded">
+                </a>
+            </div>
+
+            <div class="engineer-demo-item">
+                <a href="<%= project.layer2.demoImg2 %>"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="點擊查看完整圖片">
+                    <img
+                        src="<%= project.layer2.demoImg2 %>"
+                        alt="<%= project.title %> 功能畫面二"
+                        class="responsive-media rounded">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -54,12 +78,12 @@
             <p style="line-height: 1.8; opacity: 0.9; margin-bottom: 24px; white-space: pre-line;"><%= project.layer3.solution %></p>
 <!-- 判斷：如果有給網址且不是 "#"，就顯示連結按鈕；如果是 "#" 或空的，就顯示保護狀態 -->
 <% if (project.layer3.githubLink && project.layer3.githubLink !== "#" && project.layer3.githubLink !== "") { %>
-    <a href="<%= project.layer3.githubLink %>" target="_blank" class="cta-button" style="background: #fff; color: var(--text-primary);">
+    <a href="<%= project.layer3.githubLink %>" target="_blank" rel="noopener noreferrer" class="cta-button" style="background: #fff; color: var(--text-primary);">
         <%= project.layer3.githubLink.includes('github.com') ? '查看 GitHub 原始碼' : '🚀 前往網站實際體驗' %>
     </a>
 <% } else { %>
     <span class="cta-button" style="background: rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); cursor: not-allowed; border: 1px dashed rgba(255,255,255,0.5);">
-        🔒 內部私有系統 (含機密 API 密鑰)
+        🔒 原始碼未公開｜本機實作專案
     </span>
 <% } %>
 

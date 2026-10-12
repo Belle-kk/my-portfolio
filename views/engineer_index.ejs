@@ -19,7 +19,7 @@
     <section class="ezbiz container">
         <div class="section-header"><h2><%= profile.ezbiz.title %></h2></div>
         <div class="glass-card hover-effect p-24" style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px;">
+            <div style="flex: 1 1 300px; min-width: 0;">
                 <h3 class="mb-16"><%= profile.ezbiz.subtitle %></h3>
                 <p class="mb-24" style="line-height: 1.8; opacity: 0.9;"><%= profile.ezbiz.description %></p>
                 <div class="tech-stack mb-24">
@@ -27,9 +27,8 @@
                         <span><%= tech %></span>
                     <% }); %>
                 </div>
-                <a href="<%= profile.ezbiz.demoLink %>" target="_blank" class="cta-button">前往 GitHub</a>
             </div>
-            <div style="flex: 1; min-width: 300px;">
+            <div style="flex: 1 1 300px; min-width: 0;">
                 <img src="/images/<%= profile.ezbiz.image %>" class="responsive-media rounded">
             </div>
         </div>

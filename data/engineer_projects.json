@@ -1,38 +1,86 @@
 {
+    "personality": {
+        "title": "AI 人格實驗室｜多元人格測驗與 AI 分析平台",
+        "heroImg": "/images/personality-cover.png",
+        "layer1": {
+            "archImg": "/images/personality-architecture.png",
+            "intro": "AI 人格實驗室是一個正式上線的人格測驗與 AI 分析平台，提供 MBTI、Big Five、DISC 等測驗、免費結果與付費 AI 深度分析報告。前端採用 React 與 Vite，後端以 Python FastAPI 建立 API，搭配 MySQL 儲存會員、測驗及報告資料，並整合藍新 NewebPay 信用卡付款流程。",
+            "techs": [
+                {
+                    "title": "前端介面與測驗流程",
+                    "desc": "使用 React 與 Vite 建立響應式介面，規劃人格測驗、結果展示、會員操作及付費報告等使用流程。"
+                },
+                {
+                    "title": "後端 API 與資料管理",
+                    "desc": "透過 Python FastAPI 建立會員驗證、測驗結果及報告相關 API，搭配 MySQL 管理會員、測驗紀錄與報告狀態。"
+                },
+                {
+                    "title": "AI 報告與金流整合",
+                    "desc": "整合 AI 報告生成流程及藍新 NewebPay 信用卡付款，串接訂單建立、付款結果處理與報告使用權限。"
+                }
+            ]
+        },
+        "layer2": {
+            "demoImg1": "/images/personality-result.png",
+            "demoImg2": "/images/personality-report.png"
+        },
+        "layer3": {
+            "challenge": "正式金流串接與付款狀態管理",
+            "solution": "【開發問題】\n付費報告功能不只需要完成信用卡付款，還必須確認交易結果、處理付款通知與使用者返回網站的流程，避免付款狀態不同步，或在付款尚未確認時錯誤開放付費功能。\n\n【處理方式】\n1. 金流服務整合：串接藍新 NewebPay MPG API，處理交易資料、付款通知及付款完成後的返回流程。\n\n2. 付款狀態管理：將付款流程與報告狀態分開管理，透過後端確認交易結果，避免只依賴前端返回頁面的資訊判定付款成功。\n\n3. 測試與環境保護：針對付款設定、金額驗證及相關服務流程建立自動化測試，並限制模擬付款功能僅能在開發環境使用，降低正式環境誤用的風險。\n\n【實作成果】\n完成正式網站部署，MBTI、Big Five、DISC 測驗及免費結果可正常使用，付費後亦可取得 AI 深度分析報告，正式信用卡付款流程已完成實際測試。",
+            "githubLink": "https://aitypelab.com/"
+        }
+    },
     "mktmatrix": {
-        "title": "MktMatrix AI Suite - 行銷自動化生成系統",
+        "title": "MktMatrix AI Suite｜AI 行銷內容輔助工具",
         "heroImg": "/images/mktmatrix-screenshot.png",
         "layer1": {
             "archImg": "/images/archImg.png",
-            "intro": "這套系統採 Node.js 後端架構，透過前端介面接收使用者輸入的商品條件後，非同步呼叫 LLM 進行圖文運算，並透過 Webhook 將資料自動拋轉至外部排程系統。",
-            "techs": [
-                { "title": "前端介面開發", "desc": "以 HTML5/CSS3 構建具備現代 SaaS 風格的 RWD 響應式介面，優化使用者操作體驗。" },
-                { "title": "後端與資料流", "desc": "使用 Node.js / Express.js 處理路由，負責前端請求與第三方服務之間的資料傳遞。" },
-                { "title": "第三方 API 整合", "desc": "介接 Gemini / ChatGPT API 進行自動化生成，並與 Make.com Webhook 無縫對接。" }
-            ]
+            "intro": "從電商行銷內容製作需求出發，使用 Node.js 與 Express 建立本機 Web 應用，整合 Gemini、ChatGPT API，協助產生商品文案、行銷企劃內容及視覺生成提示詞。另外透過 Make Webhook 與 Discord 測試文字貼文發布流程。目前為本機實作專案，尚未公開提供服務。",
+        "techs": [
+            {
+                "title": "前端介面與操作流程",
+                "desc": "使用 HTML、CSS 建立 Web 操作介面，依據商品資料輸入、內容生成及結果呈現等需求，規劃使用者操作流程。"
+            },
+            {
+                "title": "Node.js 後端與 API 串接",
+                "desc": "透過 Node.js、Express 處理前端請求，整合 Gemini 與 ChatGPT API，取得 AI 生成的行銷文案及視覺提示詞。"
+            },
+            {
+                "title": "Webhook 工作流程測試",
+                "desc": "串接 Make Webhook 與 Discord，驗證文字內容的自動發布流程，作為後續行銷工作流程整合的實作基礎。"
+            }
+        ]
         },
         "layer2": {
             "demoImg1": "/images/demoImg1.png",
             "demoImg2": "/images/demoImg2.png"
         },
         "layer3": {
-            "challenge": "處理 AI API 的長時間等待與前端體驗優化",
-            "solution": "【問題】 由於呼叫 LLM 模型進行多通路行銷文案生成通常需要較長的運算時間（約 5~10 秒），且後端需同時驅動 「Prompt 關鍵字生成引擎」 來提供高準確度的生圖策略，若處理不當容易造成瀏覽器請求逾時 (Timeout) 或使用者誤以為系統當機。\n\n【解決方案】 \n 1. 非同步架構優化： 我在後端導入了非同步（Asynchronous）處理機制。在等待 AI API 回傳時，前端實作明確的 Loading 狀態與進度提示，確保資料流穩定接收不漏失。\n\n2. 解耦設計與成本優化（架構亮點）： 系統核心採用「文案自動化與生圖策略分離」的解耦設計。後端經由精密 Prompt 導引 AI 精準輸出符合 Midjourney / DALL-E 3 規格的結構化生圖提示詞。此設計不僅將單次 API 呼叫成本與時間大幅降低，更將生圖的自主權交還給操作者，大幅提升系統的容錯率與商業實用性。",
-
+            "challenge": "AI API 回應等待與內容生成流程設計",
+            "solution": "【開發問題】\nAI API 產生行銷內容需要一定的回應時間，使用者在等待期間可能無法判斷系統是否仍在處理。此外，商品文案與視覺提示詞有不同用途，需要清楚區分輸出內容。\n\n【處理方式】\n1. 請求與等待狀態：透過非同步 API 呼叫處理內容生成請求，並在前端加入 Loading 提示，讓使用者了解目前的處理狀態。\n\n2. 內容生成流程：依據商品資訊與行銷需求，分別規劃文案生成及視覺提示詞的輸出方式，方便使用者檢視和調整結果。\n\n3. 外部流程測試：透過 Make Webhook 與 Discord 測試文字發布，確認資料能由本機應用傳遞至外部服務。此測試不包含 Instagram 私訊、CRM 或正式社群帳號管理功能。",
             "githubLink": "#"
-            
         }
     },
     
     "audio": {
-        "title": "EchoFlux 真實技術棧",
+        "title": "EchoFlux｜雲端音訊處理與管理平台",
         "heroImg": "/images/echoflux-screenshot.png",
         "layer1": {
             "archImg": "/images/echoflux-arch.png",
-            "intro": "此專案著重於多媒體檔案的處理與雲端部署。系統能接收音訊輸入，透過後端邏輯進行轉檔或狀態處理，並在前端提供流暢的播放與管理介面。",
+            "intro": "以音訊檔案處理與雲端儲存為核心的 Web 應用實作。透過 Node.js 與 FFmpeg 處理音訊檔案，整合 Google Drive API 進行檔案上傳與儲存，並部署至 Render，提供音訊處理及檔案管理的操作介面。",
             "techs": [
-                { "title": "前端 AI 智慧控制介面", "desc": "實作多檔案上傳清單管理，整合智慧型音訊強化的引數配置，並動態捕捉後端 FFmpeg 合併完成後的雲端回傳路徑。" },
-                { "title": "雲端部署與整合", "desc": "成功將全端系統託管於 Render 平台。除解決跨網域（CORS）與環境變數配置外，更深入串接第三方 Google Drive API，完成跨平台的雲端檔案動態寫入與權限自動解鎖。" }
+                {
+                    "title": "音訊處理與操作介面",
+                    "desc": "規劃多檔案上傳與處理流程，透過前端介面設定音訊處理參數，並由後端整合 FFmpeg 執行音訊合併與輸出。"
+                },
+                {
+                    "title": "Google Drive API 整合",
+                    "desc": "串接 Google Drive API，將後端完成處理的音訊檔案上傳至雲端，並處理檔案名稱、儲存路徑及相關回傳資訊。"
+                },
+                {
+                    "title": "Render 雲端部署",
+                    "desc": "將 Web 應用部署至 Render，配置環境變數與第三方 API 連線設定，測試線上環境的音訊處理與雲端上傳流程。"
+                }
             ]
         },
         "layer2": {
@@ -40,9 +88,8 @@
             "demoImg2": "/images/echoflux-code.png"
         },
         "layer3": {
-            "challenge": "EchoFlux 核心技術突破",
-            "solution": "【問題】 專案在後端經由 FFmpeg 混音並高壓輸出大型 MP3 檔案後，直接透過一般的數據封包上傳至 Google Drive API 時，極易因網路波動或檔案鎖定導致傳輸中斷，造成雲端硬碟產生 0KB 毀損檔案或發生檔名變數重複污染（出現亂碼時間戳）的嚴重臭蟲。\n\n【解決方案】 實作「終極物理串流突圍」機制。 徹底捨棄不穩定的記憶體緩衝（Buffer）傳輸，改用 Node.js 的 fs.createReadStream 建立真實的硬碟實體檔案二進位制串流管道（Binary Pipe）直灌雲端。同時重新設計 driveService 核心邏輯，嚴格落實參數命名對齊與解耦，將檔名與實體路徑完全切割。最終達成 100% 傳輸成功率，確保雲端檔名乾淨正確，且檔案皆能流暢預覽與播放。",
-
+            "challenge": "大型音訊檔案的雲端上傳與檔名處理",
+            "solution": "【開發問題】\n使用 FFmpeg 完成音訊處理後，將較大的 MP3 檔案上傳至 Google Drive 時，曾遇到雲端產生 0KB 檔案，以及輸出檔名重複附加時間戳記等問題，影響檔案管理與後續播放。\n\n【處理方式】\n1. 檔案串流處理：調整原本的檔案傳輸方式，使用 Node.js 的 fs.createReadStream 讀取已完成輸出的音訊檔案，再交由 Google Drive API 處理上傳。\n\n2. 檔名與路徑管理：重新整理 driveService 中的參數傳遞方式，區分實際檔案路徑與雲端顯示名稱，避免檔名在不同處理階段被重複修改。\n\n3. 上傳流程測試：針對音訊處理、檔案上傳及雲端播放流程進行測試，確認調整後的檔案能正常儲存與使用。",
             "githubLink": "https://echoflux.onrender.com/index.html"
         }
     }

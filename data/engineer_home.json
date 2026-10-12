@@ -1,20 +1,30 @@
 {
     "metaTitle": "AI 應用與自動化開發 | 專案作品集",
     "hero": {
-        "badge": "E-commerce Expert ｜ AI Developer",
-        "title": "用 AI 開發解決商業痛點的營運者",
-        "description": "擁有 10 年以上電商與數位行銷實戰經驗。2025 年起導入 AI 輔助開發，成功跨界全端實作。我不盲目追求底層程式碼的鑽研，而是專注於利用 AI (ChatGPT/Gemini)、Node.js 與 API 串接，快速打造能解決企業真實營運痛點的自動化 SaaS 系統。",
+        "badge": "電商營運 × AI 輔助開發 × Web 應用",
+        "title": "從營運需求出發，實作數位應用",
+        "description": "擁有 10 年以上電商營運與網站行銷經驗，並持續學習程式開發與系統整合。從實際工作需求出發，運用 AI 輔助開發、前後端技術及 API 串接，嘗試將行銷流程、內容製作與服務功能轉化為可操作的 Web 應用。",
         "email": "bellekk0523@gmail.com"
     },
     "ezbiz": {
-        "title": "核心技術與實戰優勢",
-        "subtitle": "AI 輔助開發與前後端整合",
-        "description": "深厚的電商 Domain Know-how 讓我知道『系統該長什麼樣子』，而 AI 則是我實現想法的武器。具備從 0 到 1 獨立建置 Web 應用的能力，熟練掌握 Prompt Engineering 來生成精準的前端 UI/UX 與 Node.js 後端路由，並能靈活將應用部署至 Render 等雲端環境，實現穩定的工作流。",
-        "techStack": ["AI 輔助全端開發", "Node.js / API 串接", "Prompt Engineering", "電商營運思維"],
-        "demoLink": "https://github.com/Belle-kk",
+        "title": "技術應用與專案實作",
+        "subtitle": "AI 輔助開發與 Web 系統整合",
+        "description": "結合電商營運經驗與 AI 輔助開發工具，持續實作不同類型的 Web 應用。專案涵蓋 Node.js、Python FastAPI、React、MySQL 與第三方 API 串接，並透過測試、問題排查及雲端部署，逐步累積前後端整合與應用開發經驗。",
+        "techStack": [
+            "AI 輔助開發",
+            "Node.js / FastAPI",
+            "React / MySQL",
+            "API 串接與雲端部署"
+        ],
         "image": "mktmatrix-screenshot.png"
     },
     "portfolios": [
+        {
+            "id": "personality",
+            "title": "AI 人格實驗室",
+            "category": "多元人格測驗｜AI 深度報告｜線上金流整合",
+            "coverImg": "/images/personality-cover.png"
+        },
         {
             "id": "mktmatrix",
             "title": "MktMatrix AI Suite",
