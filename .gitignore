@@ -25,3 +25,6 @@ config/tmusic-service-account.json
 
 # 擋住 txt 備註事項
 *.txt
+
+#擋住 dist 屬於自動產生的網站檔案
+dist/

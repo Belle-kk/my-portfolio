@@ -3,13 +3,13 @@
   "hero": {
     "badge": "網站行銷｜電商營運｜AI 工具應用",
     "title": "網站行銷與數位營運作品集",
-    "description": "擁有 10 年以上電商平台營運與網站行銷經驗，熟悉網站管理、商品企劃、視覺設計及 AI 工具應用，持續透過技術提升內容品質與工作效率。",
+    "description": "擁有 10 年以上電商營運與網站行銷經驗，熟悉網站管理、商品企劃、行銷素材製作及數位內容規劃。結合 AI 工具與程式應用經驗，嘗試將重複性的行銷工作轉化為更有效率的操作流程。",
     "email": "bellekk0523@gmail.com"
   },
   "ezbiz": {
     "title": "AI 行銷工具實作",
-    "subtitle": "MktMatrix AI Suite｜整合 AI 生成與行銷工作流程",
-    "description": "為提升電商內容產製效率，我設計並開發此 AI 行銷工具。透過整合 Gemini 與 ChatGPT API，可快速生成商品文案、行銷圖片與 SEO 內容，並結合 Webhook 串接外部工作流程，協助降低重複作業時間，提升網站與社群內容產出效率。",
+    "subtitle": "MktMatrix AI Suite｜AI 行銷內容與工作流程整合工具",
+    "description": "以電商內容製作與社群行銷需求為出發點，自行規劃並開發本機操作的 AI 行銷輔助工具，整合文案產製、內容整理及營運資訊展示等功能，並透過 Webhook、Make 與 Discord 測試文字貼文自動發布流程。目前為本機開發與功能驗證階段，尚未作為正式對外營運平台。",
     "techStack": [
       "AI 文案生成",
       "Gemini / ChatGPT API",
