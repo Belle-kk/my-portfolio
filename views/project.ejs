@@ -2,6 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= project.title %></title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -9,6 +10,14 @@
     <div class="container pb-0">
         <a href="/" class="back-link">&larr; 返回首頁</a>
         <h1 class="mt-16 mb-24"><%= project.title %></h1>
+
+        <p class="text-sm mb-24" style="line-height: 1.8; opacity: 0.85;">
+            【模擬行銷企劃】本案例以過往接觸的實際商品為基礎，
+            結合自行拍攝的商品照片與 AI 生成素材，
+            重新規劃商品視覺、檔期宣傳及社群行銷內容。
+            本作品不代表原品牌實際執行的行銷活動或營運成效。
+        </p>
+
         <img src="<%= project.heroImg %>" class="responsive-media rounded glass-card">
     </div>
 
@@ -58,23 +67,24 @@
         </div>
     </section>
 
-    <!-- 第三層：社群行銷與自動化技術 -->
+    <!-- 第三層：社群行銷與影音製作 -->
     <section class="container showcase">
-        <h2 class="section-title">03. 社群行銷與自動化技術</h2>
+        <h2 class="section-title">03. 社群行銷與影音製作</h2>
         <div class="layer3-grid">
             <div class="social-box glass-card p-24">
                 <h4 class="mb-16">社群貼文</h4>
                 <img src="<%= project.layer3.igPost %>" class="responsive-media rounded">
             </div>
             <div class="video-box glass-card p-24">
-                <h4 class="mb-16">廣告短影音</h4>
+                <h4 class="mb-16">AI 輔助廣告短影音製作
+                </h4>
                 <video controls class="responsive-media rounded" style="max-height: 400px; width:100%; object-fit: contain;">
                     <source src="/videos/<%= project.layer3.video %>" type="video/mp4">
                 </video>
             </div>
             <div class="tech-box glass-card p-24" style="background: var(--text-primary); color: white;">
-                <h4 class="mb-16" style="color: var(--accent-color);">⚙️ <%= project.layer3.techNotes.title %></h4>
-                <p class="tech-notes-content" style="line-height: 1.8; opacity: 0.9;"><%= project.layer3.techNotes.content %></p>
+                <h4 class="mb-16" style="color: var(--accent-color);"><%= project.layer3.techNotes.title %></h4>
+                <p class="tech-notes-content" style="line-height: 1.8; opacity: 0.9; white-space: pre-line;"><%= project.layer3.techNotes.content %></p>
             </div>
         </div>
     </section>

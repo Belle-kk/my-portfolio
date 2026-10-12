@@ -94,6 +94,25 @@ h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; line-height: 1.3;
     display: inline-block; /* 🎯 新增這行：保持區塊完整性 */
 }
 .grid-3-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+/* 電商營運實務區塊 */
+.experience-section .section-header {
+    margin-bottom: 20px;
+}
+
+.experience-section > p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.experience-section .grid-3-cols > .glass-card {
+    height: 100%;
+}
+
+.experience-section .glass-card h3 {
+    font-size: 1.15rem;
+}
 .project-card { padding: 0; overflow: hidden; }
 .card-link { display: inline-block; color: var(--accent-color); font-weight: 600; text-decoration: none; margin-top: 8px; transition: color 0.3s; }
 .card-link:hover { color: var(--accent-hover); }
@@ -168,6 +187,23 @@ h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; line-height: 1.3;
     
     /* 調整影片與主視覺在手機上的最高高度 */
     .responsive-media { max-height: 50vh; }
+
+        /* 手機版章節標題與間距 */
+    .section-header {
+        margin-bottom: 32px;
+    }
+
+    .section-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .experience-section .section-header {
+        margin-bottom: 16px;
+    }
+
+    .experience-section .grid-3-cols {
+        gap: 16px;
+    }
 }
 /* 讓 JSON 的 \n 換行符號能在網頁上正常換行 */
 .tech-notes-content {
